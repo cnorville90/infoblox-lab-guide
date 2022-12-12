@@ -5,8 +5,10 @@
   gather_facts: yes
   vars: 
     thenetworkview: The-Rick-James-Network
-  vars_files:
-    - nios_vars.yml
+    nios_provider:
+      host: "{{ nios_grid_url }}"
+      username: "{{ nios_grid_username }}"
+      password: "{{ nios_grid_password }}"
 
   tasks: 
 
